@@ -4,4 +4,4 @@ This is breakfast planner app.
 
 * How to run the application:
 
-`run to ```rails s``` start the server`
+  Run ```rails s``` to start the server
