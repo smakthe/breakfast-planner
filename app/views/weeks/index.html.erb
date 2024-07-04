@@ -1,19 +1,21 @@
-<h1 align="center"> Weekly Breakfast Planner </h1>
-<% for i in 1..52 do %>
-    <h3> Week <%= i %> </h3>
-    <table border="1px solid black">
-        <tr>
-            <% @days.each do |day| %>
-                <th><em><%= day %></em></th>
-            <% end %>
-        </tr>
-        <tr>
-            <% @routine[rand(0...@routine.size)].each do |item| %>
-                <th><em><%= item %></em></th>
-            <% end %>
-        </tr>
-    </table>
+<div align="center">
+    <h1> Weekly Breakfast Planner </h1>
+    <% for i in 1..52 do %>
+        <h3> Week <%= i %> </h3>
+        <table border="1px solid black">
+            <tr>
+                <% @days.each do |day| %>
+                    <th><em><%= day %></em></th>
+                <% end %>
+            </tr>
+            <tr>
+                <% @routine[rand(0...@routine.size)].each do |item| %>
+                    <th><em><%= item %></em></th>
+                <% end %>
+            </tr>
+        </table>
+        <br/>
+    <% end  %>
     <br/>
-<% end  %>
-<br/>
-<div align="center"><%= button_to "New Planner", root_path, :method => :get %></div>
+    <div><%= button_to "New Planner", root_path, :method => :get %></div>
+</div>
